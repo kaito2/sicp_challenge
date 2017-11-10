@@ -22,8 +22,16 @@ def cc (amount, no, p_id):
     if graph_id != 1:
         G.edge(str(p_id),str(my_id))
     if amount == 0:
+        graph_id+=1
+        last_id = graph_id
+        G.node(str(last_id),'1')
+        G.edge(str(my_id),str(last_id))
         return 1
     if amount < 0 or no == -1:
+        graph_id+=1
+        last_id = graph_id
+        G.node(str(last_id),'0')
+        G.edge(str(my_id),str(last_id))
         return 0
     return cc(amount,no-1,my_id) + cc(amount-coinValue[no],no,my_id)
 
