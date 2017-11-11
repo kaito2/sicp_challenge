@@ -3,7 +3,7 @@
 from graphviz import Digraph
 
 # formatはpngを指定(他にはPDF, PNG, SVGなどが指定可)
-G = Digraph(format='png')
+G = Digraph(format='pdf')
 G.attr('node', shape='circle')
 
 coinValue = [1,5,10,25,50]
@@ -46,4 +46,4 @@ def coin_count(amount):
     # binary_tree.pngで保存
 
 
-print(coin_count(11))
+print(coin_count(24))

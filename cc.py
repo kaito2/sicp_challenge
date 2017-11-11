@@ -7,7 +7,7 @@ graph_id = 0
 
 def cc (amount, no):
     global graph_id
-    print(graph_id)
+    #print(graph_id)
     graph_id+=1
     if amount == 0:
         return 1
@@ -18,4 +18,4 @@ def cc (amount, no):
 def coin_count(amount):
     return cc(amount,4)
 
-print(coin_count(11))
+print(coin_count(24))
