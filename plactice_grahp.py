@@ -6,7 +6,7 @@ from graphviz import Digraph
 G = Digraph(format='png')
 G.attr('node', shape='circle')
 
-coinValue = [1,5,10,25,50]
+coinValue = [0,1,5,10,25,50]
 
 graph_id = 0
 
@@ -27,7 +27,7 @@ def cc (amount, no, p_id):
         G.node(str(last_id),'1')
         G.edge(str(my_id),str(last_id))
         return 1
-    if amount < 0 or no == -1:
+    if amount < 0 or no == 0:
         graph_id+=1
         last_id = graph_id
         G.node(str(last_id),'0')
@@ -36,7 +36,7 @@ def cc (amount, no, p_id):
     return cc(amount,no-1,my_id) + cc(amount-coinValue[no],no,my_id)
 
 def coin_count(amount):
-    cnt = cc(amount,4,0)
+    cnt = cc(amount,2,0)
     # print()するとdot形式で出力される
     global G
     print(G)
