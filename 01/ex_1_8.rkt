@@ -1,6 +1,6 @@
 #lang racket
 (define (abs x) (if (< x 0) (- x) x))
-(define (sqrt x) (sqrt-iter 1.0 x))
+(define (cube-root x) (sqrt-iter 1.0 x))
 (define (square x) (* x x))
 (define (cube x) (* x x x))
 (define (good-enough? guess x) (< (abs (- (cube guess) x)) 0.1))
@@ -14,4 +14,4 @@
     )
 )
 
-(sqrt 2)
+(provide cube-root)
