@@ -1,5 +1,7 @@
 ## Usage
 
+`sample.rkt`
+
 ```sample.rkt
 #lang racket
 (require "../tools/test/testing.rkt")
