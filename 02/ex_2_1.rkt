@@ -5,9 +5,9 @@
     (let (
             (g (gcd (abs n) (abs d)))
         )
-        (cons
-            (/ n g)
-            (/ d g)
+        (if (< d 0)
+            (cons (* (/ n g) -1) (* (/ d g) -1))
+            (cons (/ n g) (/ d g))
         )
     )
 )
