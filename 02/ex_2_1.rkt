@@ -16,36 +16,36 @@
 
 (define (add-rat x y)
     (make-rat
-        (+ (* (car x) (cdr y)) (* (car y) (cdr x)))
-        (* (cdr x) (cdr y))
+        (+ (* (numer x) (denom y)) (* (numer y) (denom x)))
+        (* (denom x) (denom y))
     )
 )
 
 (define (sub-rat x y)
     (make-rat
-        (- (* (car x) (cdr y)) (* (car y) (cdr x)))
-        (* (cdr x) (cdr y))
+        (- (* (numer x) (denom y)) (* (numer y) (denom x)))
+        (* (denom x) (denom y))
     )
 )
 
 (define (mul-rat x y)
     (make-rat
-        (* (car x) (car y))
-        (* (cdr x) (cdr y))
+        (* (numer x) (numer y))
+        (* (denom x) (denom y))
     )
 )
 
 (define (div-rat x y)
     (make-rat
-        (* (car x) (cdr y))
-        (* (car y) (cdr x))
+        (* (numer x) (denom y))
+        (* (numer y) (denom x))
     )
 )
 
 (define (equal-rat? x y)
     (= 
-        (* (car x) (cdr y))
-        (* (car y) (cdr x))
+        (* (numer x) (denom y))
+        (* (numer y) (denom x))
     )
 )
 
