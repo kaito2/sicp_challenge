@@ -19,9 +19,16 @@
     )
     (define (improve g)
         (define (average x y) (/ (+ x y) 2.0))
-        (average g (/ x g))
+        (average g (/ x g)
     )
     ((iterative-improve good-enough? improve) 1.0)
 )
 
 (sqrt 2)
+
+; †††††††††††††††††††
+; † kakushin R.I.P. †
+; †††††††††††††††††††
+
+; GitHub login
+
