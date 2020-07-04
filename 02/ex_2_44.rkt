@@ -1,6 +1,6 @@
-#lang sicp
-; (require sicp-pict)
-(#%require sicp-pict)
+; how to execute: http://community.schemewiki.org/?sicp-ex-2.44
+#lang racket
+(require (planet "sicp.ss" ("soegaard" "sicp.plt" 2 1))) 
 
 (define (up-split painter n)
     (if (= n 0)
@@ -11,5 +11,4 @@
     )
 )
 
-; (up-split wave 1)
-; cannot execute !!!!!!!
+(paint (up-split einstein 1))
